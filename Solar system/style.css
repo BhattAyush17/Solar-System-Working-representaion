@@ -1,0 +1,118 @@
+
+
+body {
+    background: #000F;
+    color: #FFFA;
+    margin: 0;
+    width: 100vw;
+  }
+  h1{
+    text-align: center;
+  }
+  p{
+    text-align: center;
+  
+  }
+  
+  ol {
+    all: unset;
+    aspect-ratio: 1 / 1;
+    container-type: inline-size;
+    display: grid;
+    width: 100%;
+  }
+  
+  li {
+    aspect-ratio: 1 / 1;
+    border: 1px dashed;
+    border-radius: 50%;
+    display: grid;
+    grid-area: 1 / 1;
+    place-self: center;
+    width: var(--d, 2cqi);
+    &::after {
+      animation: rotate var(--t, 3s) linear infinite;
+      aspect-ratio: 1 / 1;
+      background: var(--b, hsl(0, 0%, 50%));
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      content: '';
+      display: block;
+      offset-path: content-box;
+      width: var(--w, 2cqi);
+    }
+  }
+  
+  @keyframes rotate {
+    to {
+      offset-distance: 100%;
+    }
+  }
+  
+  .sun {
+    --b: radial-gradient(circle, #f9d71c 0%, #f9a825 50%, #f9a825 100%);
+    --d: 10cqi;
+    --w: 8cqi;
+    border: 0;
+    &::after {
+      animation: none;
+      offset-path: none;
+      place-self: center;
+    }
+  }
+  
+  .mercury {
+    --b: radial-gradient(circle, #c2c2c2 0%, #8a8a8a 100%);
+    --d: 15cqi;
+    --t: 2105.26ms;
+    --w: 2.0526cqi;
+  }
+  
+  .venus {
+    --b: radial-gradient(circle, #f4d03f 0%, #c39c43 100%);
+    --d: 25cqi;
+    --t: 4210.53ms;
+    --w: 2.6053cqi;
+  }
+  
+  .earth {
+    --b: radial-gradient(circle, #3a82f7 0%, #2f9e44 80%, #1a5e20 100%);
+    --d: 35cqi;
+    --t: 6315.79ms;
+    --w: 3.1579cqi;
+  }
+  
+  .mars {
+    --b: radial-gradient(circle, #e57373 0%, #af4448 100%);
+    --d: 45cqi;
+    --t: 8421.05ms;
+    --w: 3.7105cqi;
+  }
+  .jupiter {
+    --b: radial-gradient(circle, #d4a373 0%, #b87d3e 100%);
+    --d: 60cqi;
+    --t: 12631.58ms;
+    --w: 5.2632cqi;
+  }
+  
+  .saturn {
+    --b: radial-gradient(circle, #f4d03f 0%, #b08e2e 100%);
+    --d: 80cqi;
+    --t: 15789.47ms;
+    --w: 4.7368cqi;
+  }
+  
+  .uranus {
+    --b: radial-gradient(circle, #76d7c4 0%, #48c9b0 100%);
+    --d: 95cqi;
+    --t: 18947.37ms;
+    --w: 3.9474cqi;
+  }
+  
+  .neptune {
+    --b: radial-gradient(circle, #5dade2 0%, #1f618d 100%);
+    --d: 110cqi;
+    --t: 22105.26ms;
+    --w: 3.4211cqi;
+  }
+  
